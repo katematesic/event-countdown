@@ -1,0 +1,103 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Tangerine" rel="stylesheet">
+    <title>Your Special Day</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+
+<body>
+    <div class="w3-row">
+
+        <div id="title"> Countdown to Your Special Day!</div>
+        <div class="w3-hide-small">
+            <div id="instruct"> Start tracking your event by entering a date in the form below! </div>
+        </div>
+
+        <div id="welcome"></div>
+
+        <div id="form1">
+            <input type="text" id="month" placeholder="Event Month">
+            <input type="text" id="day" placeholder="Event Day">
+            <input type="text" id="year" placeholder="Event Year">
+            <input type="text" id="hour" placeholder="Event Hour">
+            <input type="text" id="minutes" placeholder="Event Minute">
+            <br>
+            <br>
+            <input type="button" value="Enter" onclick="setcountdown();">
+        </div>
+        <p id="countdown"></p>
+        <div class="w3-hide-small">
+            <div id="message"></div>
+        </div>
+
+
+    </div>
+
+    <img src="images/con.png" alt=Confetti class="w3-image">
+    <script>
+        var countdown;
+
+        function setcountdown() {
+            clearInterval(countdown);
+
+
+            var timer_month = document.getElementById("month").value;
+            var timer_day = document.getElementById("day").value;
+            var timer_year = document.getElementById("year").value;
+            var timer_hour = document.getElementById("hour").value;
+
+
+            //this code is from talkerscode.com//
+            if (timer_hour == "") timer_hour = 0;
+            var timer_min = document.getElementById("minutes").value;
+            if (timer_min == "") timer_min = 0;
+
+            var timer_date = timer_month + "/" + timer_day + "/" + timer_year + " " + timer_hour + ":" + timer_min;
+            var end = new Date(timer_date);
+            var now = new Date();
+            var second = 1000;
+            var minute = second * 60;
+            var hour = minute * 60;
+            var day = hour * 24;
+            // end code from talkerscode.com//
+            function showcountdown() {
+                var now = new Date();
+                var left = end - now;
+                if (left < 0) {
+                    clearInterval(countdown);
+                    document.getElementById("countdown").innerHTML = 'Your event has arrived!';
+                    return;
+                }
+
+
+                var days = Math.floor(left / day);
+                var hours = Math.floor((left % day) / hour);
+                var minutes = Math.floor((left % hour) / minute);
+                var seconds = Math.floor((left % minute) / second);
+
+
+
+                document.getElementById("countdown").innerHTML = days + ' ' + ' Days ' + ' ' + '';
+                document.getElementById("countdown").innerHTML += hours + ' ' + ' Hrs ' + '' + '';
+                document.getElementById("countdown").innerHTML += minutes + ' ' + ' Mins ' + '' + ' ';
+                document.getElementById("countdown").innerHTML += seconds + ' ' + ' Secs ';
+
+
+            }
+
+            form1 = setInterval(showcountdown, 1000);
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>

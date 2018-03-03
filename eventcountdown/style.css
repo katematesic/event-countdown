@@ -1,0 +1,81 @@
+ img {
+     max-width: 100%;
+
+ }
+
+ #countdown {
+
+     text-align: center;
+     font-size: 40px;
+     margin-top: 0px;
+     font-family: 'Josefin Slab', serif;
+     color: #000000;
+     padding: 10px;
+
+ }
+
+
+ #form1 {
+     padding: 10px;
+     font-size: 20px;
+     margin-top: 0px;
+     font-family: 'Josefin Slab', serif;
+     color: #000;
+     text-align: center;
+ }
+
+
+ #title {
+     padding: 55px;
+     font-size: 85px;
+     margin-top: 0px;
+     font-family: 'tangerine', cursive;
+     color: #000;
+     text-align: center;
+
+ }
+
+ #instruct {
+     padding: 60px;
+     font-size: 20px;
+     margin-top: 0px;
+     font-family: 'Josefin Slab', serif;
+     color: #000;
+     text-align: center;
+
+ }
+
+ #message {
+     padding: 60px;
+     font-size: 20px;
+     margin-top: 0px;
+     font-family: 'Josefin Slab', serif;
+     color: #000;
+     text-align: center;
+
+ }
+
+
+ #text {
+     padding: 60px;
+     font-size: 20px;
+     margin-top: 0px;
+     font-family: 'Josefin Slab', serif;
+     color: #000;
+     text-align: center;
+
+ }
+
+ input[type=button] {
+
+     border-radius: 25px;
+     background-color: #33ccff;
+     color: #fff;
+     border: none;
+     padding: 5px;
+     font-size: 18px;
+     padding-right: 20px;
+     padding-left: 20px;
+     margin: 10px;
+
+ }
